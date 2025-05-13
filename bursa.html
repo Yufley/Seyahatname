@@ -175,6 +175,7 @@
     .info-box p {
       position: relative;
       z-index: 2;
+      line-height: 1.6;
     }
 
     @keyframes boxAppear {
@@ -419,6 +420,33 @@
         width: 80%;
       }
     }
+
+    /* Yeni eklenecek resimlerin stil ayarları */
+    .new-image-section {
+      text-align: center;
+      margin: 50px auto;
+      width: 80%;
+    }
+
+    .new-image-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      transition: all 0.5s ease;
+    }
+
+    .new-image-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .image-caption {
+      color: #fff;
+      font-size: 16px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
   </style>
 </head>
 <body>
@@ -431,47 +459,64 @@
   <div class="space-particles" id="spaceParticles"></div>
 
   <header>
-    <h1>Uygulama Arayüzü</h1>
+    <h1>BURSA</h1>
     <h2>BURSA</h2>
   </header>
 
   <section class="info-box">
-    <p>"Bursa, dağ eteğinde mamur bir şehirdir. Her tarafı bağlık, bahçelik ve sulaktır. Halkı temiz yüzlü ve hoş sohbet kişilerdir." – Evliya Çelebi</p>
+    <p>"Bursa, dağ eteğinde mamur bir şehirdir. Her tarafı bağlık, bahçelik ve sulaktır. Halkı temiz yüzlü ve hoş sohbet kişilerdir. Şehrin havası ve suyu güzeldir. İpekli dokumaları ve kaplıcaları ile meşhurdur. Cennet misali bahçeleri çoktur. Bol nimetli ve bereketli bir diyardır." – Evliya Çelebi</p>
   </section>
 
   <div class="gallery-section">
     <!-- Galeri 1 -->
     <div class="gallery-box" id="gallery1">
       <button class="nav-button nav-left" onclick="changeImage('gallery1', -1)">&#8592;</button>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Bursa_Teleferik_2022.jpg" alt="Bursa 1">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Bursa_Teleferik_2022.jpg" alt="Bursa Teleferik">
       <button class="nav-button nav-right" onclick="changeImage('gallery1', 1)">&#8594;</button>
     </div>
 
     <!-- Galeri 2 -->
     <div class="gallery-box" id="gallery2">
       <button class="nav-button nav-left" onclick="changeImage('gallery2', -1)">&#8592;</button>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Bursa_Ulu_Cami_Exterior_3.jpg" alt="Bursa 2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Bursa_Ulu_Cami_Exterior_3.jpg" alt="Bursa Ulu Camii">
       <button class="nav-button nav-right" onclick="changeImage('gallery2', 1)">&#8594;</button>
     </div>
   </div>
 
   <section class="info-box">
-    <p>Bursa, Osmanlı Devleti'nin ilk başkentidir. Aynı zamanda "Yeşil Bursa" olarak bilinir ve birçok tarihi esere ev sahipliği yapar.</p>
+    <p>Bursa, Osmanlı Devleti'nin ilk başkentidir. Aynı zamanda "Yeşil Bursa" olarak bilinir ve birçok tarihi esere ev sahipliği yapar. Uludağ'ın eteklerinde kurulmuş olan şehir, doğal güzellikleri, termal kaynakları, tarihi yapıları ve zengin mutfağı ile Türkiye'nin önemli turizm merkezlerinden biridir. Osmanlı İmparatorluğu'nun ilk altı padişahının türbeleri bu şehirdedir. Bursa'nın ipeği, kestane şekeri, İskender kebabı ve Kemalpaşa tatlısı ülke çapında meşhurdur.</p>
+  </section>
+
+  <!-- Yeni resim bölümü -->
+  <section class="new-image-section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Cumal%C4%B1k%C4%B1z%C4%B1k_Sokaklar%C4%B1_2.jpg" alt="Cumalıkızık Köyü">
+    <div class="image-caption">UNESCO Dünya Mirası Listesi'nde yer alan Cumalıkızık Köyü, Osmanlı döneminden kalma tarihi dokusuyla ziyaretçileri büyülemektedir.</div>
+  </section>
+
+  <!-- Bir diğer bilgi kutusu -->
+  <section class="info-box">
+    <p>Bursa, dört mevsim ziyaretçilerine farklı güzellikler sunan bir şehirdir. Kışın Uludağ'da kayak keyfi, ilkbaharda rengarenk çiçeklerle bezenen parkları, yazın serin yaylaları ve sonbaharda hazan renklerine bürünen ormanlarıyla her zaman görülmeye değerdir. Şehir aynı zamanda sanayi açısından da Türkiye'nin en önemli merkezlerinden biridir. Otomotiv, tekstil ve gıda sanayileri şehrin ekonomisinin temelini oluşturur. Osmanlı mimarisinin en güzel örneklerinden Yeşil Türbe, Ulu Cami, Muradiye Külliyesi ve Kozahan gibi yapılar şehrin tarihini yansıtan önemli eserlerdir.</p>
   </section>
 
   <!-- Video Section -->
   <section class="video-section">
     <h2>BURSA Tanıtım Videosu</h2>
-    <iframe src="https://www.youtube.com/watch?v=vhFmnwTsm0s" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/3F45bpS8Lkw" allowfullscreen></iframe>
+  </section>
+
+  <!-- İkinci video -->
+  <section class="video-section">
+    <h2>BURSA'nın Tarihi Mekanları</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLrLt7jQ8WNArcZEyDYU8ELJOcXGHEDZYn" allowfullscreen></iframe>
   </section>
 
   <script>
     // Galeri Görselleri
     const galleries = {
       gallery1: [
-        "https://www.google.com/imgres?q=bursa&imgurl=https%3A%2F%2Fnovacar.com.tr%2Fupload%2Fnews%2Fulucami_original.webp&imgrefurl=https%3A%2F%2Fnovacar.com.tr%2Fblog%2Ftarihi-ve-dogal-guzellikleriyle-bursada-gezilecek-yerler-listesi&docid=x-KScjQgNehVWM&tbnid=lNiUQyH2ATUhWM&vet=12ahUKEwjC8KP4raGNAxVKBNsEHaMRApYQM3oECBwQAA..i&w=701&h=370&hcb=2&ved=2ahUKEwjC8KP4raGNAxVKBNsEHaMRApYQM3oECBwQAA",
-        "https://www.google.com/imgres?q=bursa&imgurl=https%3A%2F%2Fwww.vipturkiye.com%2Fuploads%2Fbursa-tour2.jpg&imgrefurl=https%3A%2F%2Fwww.vipturkiye.com%2Fblog-detay%2Fbursada-gezilecek-yerler&docid=HwmkcO05wjOVcM&tbnid=7OonsTPiN6TOHM&vet=12ahUKEwjC8KP4raGNAxVKBNsEHaMRApYQM3oECCUQAA..i&w=2200&h=1466&hcb=2&ved=2ahUKEwjC8KP4raGNAxVKBNsEHaMRApYQM3oECCUQAA",
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gezenanne.com%2F2013%2F08%2Fbursa-gezilecek-yerler.html&psig=AOvVaw0Ze6690Pb4AhaYkU2cOhNe&ust=1747257068994000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKjuwbiuoY0DFQAAAAAdAAAAABAL"
+        "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bursa_Teleferik_2022.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bursa_Tophane.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bursa_-_Panoramic_view.jpg/640px-Bursa_-_Panoramic_view.jpg"
       ],
       gallery2: [
         "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bursa_Ulu_Cami_Exterior_3.jpg",
@@ -588,7 +633,7 @@
     // Sayfa kaydırma efekti
     window.addEventListener('scroll', function() {
       const scrollPosition = window.scrollY;
-      const elements = document.querySelectorAll('.info-box, .gallery-box, iframe');
+      const elements = document.querySelectorAll('.info-box, .gallery-box, iframe, .new-image-section img');
       
       elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top + scrollPosition;
