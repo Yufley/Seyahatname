@@ -34,7 +34,17 @@
     </style>
     <script>
         function openInfoPage(city) {
-            window.location.href = `city.html?name=${city}`;
+            const formattedCity = city
+                .toLowerCase()
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Türkçe karakterleri temizler
+                .replace(/ı/g, "i")
+                .replace(/ç/g, "c")
+                .replace(/ş/g, "s")
+                .replace(/ö/g, "o")
+                .replace(/ü/g, "u")
+                .replace(/ğ/g, "g")
+                .replace(/ /g, ""); // boşlukları kaldırır
+            window.location.href = `${formattedCity}.html`;
         }
     </script>
 </head>
