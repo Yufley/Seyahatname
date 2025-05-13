@@ -2,12 +2,12 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Bursa Tanıtımı</title>
+  <title>İstanbul Tanıtımı</title>
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #a86940;
+      background-color: #1e5f74;
       overflow-x: hidden;
       perspective: 1000px;
     }
@@ -20,7 +20,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/4/4c/Bursa_Teleferik_2022.jpg') no-repeat center center fixed;
+      background: url('/api/placeholder/1200/800') no-repeat center center fixed;
       background-size: cover;
       animation: parallaxEffect 40s infinite alternate ease-in-out;
       z-index: -2;
@@ -35,7 +35,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(106, 79, 57, 0.6) 100%);
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(30, 95, 116, 0.6) 100%);
       animation: backgroundGlow 8s infinite alternate ease-in-out;
       z-index: -1;
     }
@@ -57,7 +57,7 @@
       text-align: center;
       padding: 50px 20px 10px;
       background-color: rgba(255, 255, 255, 0.8);
-      border-bottom: 3px solid #6a4f39;
+      border-bottom: 3px solid #1e5f74;
       position: relative;
       overflow: hidden;
       box-shadow: 0 5px 25px rgba(0,0,0,0.2);
@@ -78,7 +78,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(ellipse at center, rgba(106, 79, 57, 0.3) 0%, rgba(255, 255, 255, 0.1) 70%);
+      background: radial-gradient(ellipse at center, rgba(30, 95, 116, 0.3) 0%, rgba(255, 255, 255, 0.1) 70%);
       animation: headerGlow 10s infinite alternate ease-in-out;
       z-index: 0;
     }
@@ -94,7 +94,7 @@
       font-family: 'Brush Script MT', cursive;
       margin-bottom: 5px;
       animation: titleEffect 3s ease-out, textGlow 3s infinite alternate;
-      color: #6a4f39;
+      color: #1e5f74;
       position: relative;
       z-index: 2;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -104,7 +104,7 @@
       font-size: 30px;
       margin-top: 0;
       animation: subtitleEffect 3s ease-out 0.5s, textPulse 4s infinite alternate;
-      color: #4e4037;
+      color: #133b49;
       position: relative;
       z-index: 2;
       letter-spacing: 10px;
@@ -125,9 +125,9 @@
     }
 
     @keyframes textGlow {
-      0% { text-shadow: 0 0 5px rgba(106, 79, 57, 0.5); }
-      50% { text-shadow: 0 0 20px rgba(106, 79, 57, 0.8), 0 0 30px rgba(106, 79, 57, 0.5); }
-      100% { text-shadow: 0 0 5px rgba(106, 79, 57, 0.5); }
+      0% { text-shadow: 0 0 5px rgba(30, 95, 116, 0.5); }
+      50% { text-shadow: 0 0 20px rgba(30, 95, 116, 0.8), 0 0 30px rgba(30, 95, 116, 0.5); }
+      100% { text-shadow: 0 0 5px rgba(30, 95, 116, 0.5); }
     }
 
     @keyframes textPulse {
@@ -142,7 +142,7 @@
       padding: 20px;
       margin: 30px auto;
       width: 60%;
-      border: 3px solid #6a4f39;
+      border: 3px solid #1e5f74;
       text-align: center;
       font-weight: bold;
       font-size: 18px;
@@ -208,7 +208,7 @@
 
     .gallery-box {
       background-color: rgba(255, 255, 255, 0.9);
-      border: 3px solid #6a4f39;
+      border: 3px solid #1e5f74;
       position: relative;
       height: 250px;
       display: flex;
@@ -282,7 +282,7 @@
       top: 50%;
       transform: translateY(-50%);
       font-size: 30px;
-      background-color: rgba(106, 79, 57, 0.7);
+      background-color: rgba(30, 95, 116, 0.7);
       color: white;
       border: none;
       border-radius: 50%;
@@ -317,7 +317,7 @@
     }
 
     .nav-button:hover {
-      background-color: rgba(106, 79, 57, 0.9);
+      background-color: rgba(30, 95, 116, 0.9);
       transform: translateY(-50%) scale(1.2);
     }
 
@@ -389,7 +389,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #6a4f39;
+      background-color: #1e5f74;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -459,69 +459,69 @@
   <div class="space-particles" id="spaceParticles"></div>
 
   <header>
-    <h1>BURSA</h1>
-    <h2>BURSA</h2>
+    <h1>İSTANBUL</h1>
+    <h2>İSTANBUL</h2>
   </header>
 
   <section class="info-box">
-    <p>"Bursa, dağ eteğinde mamur bir şehirdir. Her tarafı bağlık, bahçelik ve sulaktır. Halkı temiz yüzlü ve hoş sohbet kişilerdir. Şehrin havası ve suyu güzeldir. İpekli dokumaları ve kaplıcaları ile meşhurdur. Cennet misali bahçeleri çoktur. Bol nimetli ve bereketli bir diyardır." – Evliya Çelebi</p>
+    <p>"İstanbul, dünya üzerinde, iki kıtaya aynı anda basmak gibi bir imtiyaza sahip tek şehirdir. İki deniz arasına kurulmuş ve iki kıtaya yayılmış bu büyülü şehir, asırlar boyunca nice uygarlıklara ev sahipliği yapmıştır. Tarihi boyunca pek çok din, dil ve ırktan insanın bir arada yaşadığı bu şehir, doğu ve batının kesiştiği benzersiz bir kavşaktır." – Yahya Kemal Beyatlı</p>
   </section>
 
   <div class="gallery-section">
     <!-- Galeri 1 -->
     <div class="gallery-box" id="gallery1">
       <button class="nav-button nav-left" onclick="changeImage('gallery1', -1)">&#8592;</button>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Bursa_Teleferik_2022.jpg" alt="Bursa Teleferik">
+      <img src="/api/placeholder/600/400" alt="Ayasofya">
       <button class="nav-button nav-right" onclick="changeImage('gallery1', 1)">&#8594;</button>
     </div>
 
     <!-- Galeri 2 -->
     <div class="gallery-box" id="gallery2">
       <button class="nav-button nav-left" onclick="changeImage('gallery2', -1)">&#8592;</button>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Bursa_Ulu_Cami_Exterior_3.jpg" alt="Bursa Ulu Camii">
+      <img src="/api/placeholder/600/400" alt="Sultan Ahmet Camii">
       <button class="nav-button nav-right" onclick="changeImage('gallery2', 1)">&#8594;</button>
     </div>
   </div>
 
   <section class="info-box">
-    <p>Bursa, Osmanlı Devleti'nin ilk başkentidir. Aynı zamanda "Yeşil Bursa" olarak bilinir ve birçok tarihi esere ev sahipliği yapar. Uludağ'ın eteklerinde kurulmuş olan şehir, doğal güzellikleri, termal kaynakları, tarihi yapıları ve zengin mutfağı ile Türkiye'nin önemli turizm merkezlerinden biridir. Osmanlı İmparatorluğu'nun ilk altı padişahının türbeleri bu şehirdedir. Bursa'nın ipeği, kestane şekeri, İskender kebabı ve Kemalpaşa tatlısı ülke çapında meşhurdur.</p>
+    <p>İstanbul, Türkiye'nin en kalabalık şehri ve ekonomik, kültürel ve tarihi merkezi. Boğaziçi Boğazı boyunca ve Haliç'i çevreleyerek Asya ve Avrupa kıtalarının birleştiği noktada yer alır. Üç büyük imparatorluğa başkentlik yapmış olan İstanbul, Bizans, Roma ve Osmanlı İmparatorluğu dönemlerinden kalan sayısız tarihi esere ev sahipliği yapar. UNESCO Dünya Mirası Listesi'nde yer alan Sultanahmet bölgesi, Ayasofya, Topkapı Sarayı, Sultanahmet Camii ve Süleymaniye Camii gibi dünya çapında ünlü yapılar barındırır. İstanbul'un geleneksel Türk mutfağı, Kapalıçarşı'daki alışveriş deneyimi ve Boğaz manzarası dünyanın dört bir yanından turistleri kendine çeker.</p>
   </section>
 
   <!-- Yeni resim bölümü -->
   <section class="new-image-section">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Cumal%C4%B1k%C4%B1z%C4%B1k_Sokaklar%C4%B1_2.jpg" alt="Cumalıkızık Köyü">
-    <div class="image-caption">UNESCO Dünya Mirası Listesi'nde yer alan Cumalıkızık Köyü, Osmanlı döneminden kalma tarihi dokusuyla ziyaretçileri büyülemektedir.</div>
+    <img src="/api/placeholder/800/500" alt="Boğaz Köprüsü">
+    <div class="image-caption">İstanbul Boğazı üzerindeki köprülerden biri olan 15 Temmuz Şehitler Köprüsü (eski adıyla Boğaziçi Köprüsü), Asya ve Avrupa kıtalarını birleştirmektedir.</div>
   </section>
 
   <!-- Bir diğer bilgi kutusu -->
   <section class="info-box">
-    <p>Bursa, dört mevsim ziyaretçilerine farklı güzellikler sunan bir şehirdir. Kışın Uludağ'da kayak keyfi, ilkbaharda rengarenk çiçeklerle bezenen parkları, yazın serin yaylaları ve sonbaharda hazan renklerine bürünen ormanlarıyla her zaman görülmeye değerdir. Şehir aynı zamanda sanayi açısından da Türkiye'nin en önemli merkezlerinden biridir. Otomotiv, tekstil ve gıda sanayileri şehrin ekonomisinin temelini oluşturur. Osmanlı mimarisinin en güzel örneklerinden Yeşil Türbe, Ulu Cami, Muradiye Külliyesi ve Kozahan gibi yapılar şehrin tarihini yansıtan önemli eserlerdir.</p>
+    <p>İstanbul, tarih boyunca farklı medeniyetlere ev sahipliği yapmış bir dünya kentidir. Her köşesinde tarih kokan bu şehir, modern yaşamla geleneksel değerlerin bir arada yaşadığı nadir yerlerden biridir. Boğazın eşsiz güzelliği, tarihi yarımadanın ihtişamı, adalardaki sakin yaşam, her mevsim bambaşka güzellikler sunar. Camileri, kiliseleri, sinagogları ve daha birçok ibadethanesiyle dinler arası hoşgörünün simgesi olan İstanbul, aynı zamanda Türkiye'nin sanat ve kültür başkentidir. Her yıl düzenlenen uluslararası festival ve etkinliklerle dünya kültürlerinin buluşma noktası olan İstanbul, aynı zamanda Türk mutfağının en lezzetli örneklerini tatmak için de ideal bir destinasyondur.</p>
   </section>
 
   <!-- Video Section -->
   <section class="video-section">
-    <h2>BURSA Tanıtım Videosu</h2>
-    <iframe src="https://www.youtube.com/embed/3F45bpS8Lkw" allowfullscreen></iframe>
+    <h2>İSTANBUL Tanıtım Videosu</h2>
+    <iframe src="https://www.youtube.com/embed/7A1q7v4btbk" allowfullscreen></iframe>
   </section>
 
   <!-- İkinci video -->
   <section class="video-section">
-    <h2>BURSA'nın Tarihi Mekanları</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLrLt7jQ8WNArcZEyDYU8ELJOcXGHEDZYn" allowfullscreen></iframe>
+    <h2>İSTANBUL'un Tarihi Güzellikleri</h2>
+    <iframe src="https://www.youtube.com/embed/6WmEzm4Qohc" allowfullscreen></iframe>
   </section>
 
   <script>
     // Galeri Görselleri
     const galleries = {
       gallery1: [
-        "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bursa_Teleferik_2022.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bursa_Tophane.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bursa_-_Panoramic_view.jpg/640px-Bursa_-_Panoramic_view.jpg"
+        "/api/placeholder/600/400",
+        "/api/placeholder/601/400",
+        "/api/placeholder/602/400"
       ],
       gallery2: [
-        "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bursa_Ulu_Cami_Exterior_3.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/0/00/Yesil_Turbe%2C_Bursa.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/d/df/Bursa_Kozahan_Inner_Court.jpg"
+        "/api/placeholder/600/400", 
+        "/api/placeholder/601/400",
+        "/api/placeholder/602/400"
       ]
     };
 
