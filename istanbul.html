@@ -46,10 +46,16 @@
 
     .gallery-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       width: 80%;
       margin: 40px auto;
+    }
+
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
     .gallery-box {
@@ -74,6 +80,17 @@
 
     .gallery-box:hover img {
       transform: scale(1.1);
+    }
+
+    .gallery-paragraph {
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      font-size: 14px;
+      line-height: 1.6;
+      min-height: 120px;
     }
 
     .nav-button {
@@ -148,6 +165,40 @@
       font-size: 12px;
     }
 
+    .divan-section {
+      background: rgba(139,69,19,0.9);
+      color: #fff;
+      padding: 30px;
+      margin: 50px auto;
+      width: 80%;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .divan-section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #f4e4bc;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .divan-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .divan-section .highlight {
+      background: rgba(244,228,188,0.2);
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      border-left: 4px solid #f4e4bc;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -170,8 +221,12 @@
 
     @media (max-width: 768px) {
       .info-box { width: 90%; }
-      .gallery-section { width: 90%; }
+      .gallery-section { 
+        width: 90%; 
+        grid-template-columns: 1fr;
+      }
       .video-section { width: 90%; }
+      .divan-section { width: 90%; }
       .tilsim-item { flex-direction: column; text-align: center; }
       .tilsim-content { margin-right: 0; margin-bottom: 10px; }
     }
@@ -188,16 +243,26 @@
   </section>
 
   <div class="gallery-section">
-    <div class="gallery-box" id="gallery1">
-      <button class="nav-button nav-left" onclick="changeImage('gallery1', -1)">&#8592;</button>
-      <img src="/api/placeholder/600/400" alt="Ayasofya">
-      <button class="nav-button nav-right" onclick="changeImage('gallery1', 1)">&#8594;</button>
+    <div class="gallery-item">
+      <div class="gallery-box" id="gallery1">
+        <button class="nav-button nav-left" onclick="changeImage('gallery1', -1)">&#8592;</button>
+        <img src="/api/placeholder/600/400" alt="Ayasofya">
+        <button class="nav-button nav-right" onclick="changeImage('gallery1', 1)">&#8594;</button>
+      </div>
+      <div class="gallery-paragraph" id="paragraph1">
+        <p>Ayasofya paragrafı 1 - Bu kısmı kendiniz düzenleyebilirsiniz.</p>
+      </div>
     </div>
 
-    <div class="gallery-box" id="gallery2">
-      <button class="nav-button nav-left" onclick="changeImage('gallery2', -1)">&#8592;</button>
-      <img src="/api/placeholder/600/400" alt="Sultan Ahmet Camii">
-      <button class="nav-button nav-right" onclick="changeImage('gallery2', 1)">&#8594;</button>
+    <div class="gallery-item">
+      <div class="gallery-box" id="gallery2">
+        <button class="nav-button nav-left" onclick="changeImage('gallery2', -1)">&#8592;</button>
+        <img src="/api/placeholder/600/400" alt="Sultan Ahmet Camii">
+        <button class="nav-button nav-right" onclick="changeImage('gallery2', 1)">&#8594;</button>
+      </div>
+      <div class="gallery-paragraph" id="paragraph2">
+        <p>Sultan Ahmet Camii paragrafı 1 - Bu kısmı kendiniz düzenleyebilirsiniz.</p>
+      </div>
     </div>
   </div>
 
@@ -397,10 +462,39 @@
     </div>
   </section>
 
+  <section class="divan-section">
+    <h3>Dîvânu Lugâti't-Türk</h3>
+    <div class="highlight">
+      <p><strong>Kepük</strong> (Çocukların futbola benzer oynadıkları bir oyun) TRT Avaz → 6 ay önce</p>
+    </div>
+    <p>Dîvânu Lugâti't-Türk'ü yazdıran, kendi ifadesiyle, hadise dayanıyormuş: "Türk dilini öğreniniz; çünkü onlara uzun sürecek bir egemenlik vardır."</p>
+    <p>Bu hadis doğruysa Türkçeyi öğrenmek, Peygamberimizin buyruğudur. Eğer bu hadis sahih (doğru) değilse, o zaman akıl, Türkçenin öğrenilmesi gerektiğini söyler; çünkü artık Türklerin çağı başlamıştır.</p>
+    <p>Günümüzde Fatih Millet Kütüphanesi'nde bulunan Dîvânu Lugâti't-Türk, Orhun yazıtlarının bulunmasından sonraki en önemli gelişme sayılmaktadır. 11. yüzyılda kaleme alınan bu eser, 8 bölümde toplam 8 bin madde ve yaklaşık 18 bin kelimeyle Türkçenin ilk sözlüğüdür. 319 yapraktan oluşmaktadır.</p>
+    <p>1072 - 1074 yılları arasında Kaşgarlı Mahmud tarafından yazılmıştır. İlk başta amacı sadece Araplara Türkçe öğretmek olsa da, sonrasında sözlüğün içeriğinin genişlemesiyle daha büyük bir amaca hizmet etmiştir. Eserin içerisinde Türkçe sözlükle birlikte Türk kültürü de bulunmaktadır. Ayrıca, Türkçenin dil yapısıyla ilgili bilgiler de yer almaktadır.</p>
+    <p>16 yıl süren araştırmalarla yazılan bu kitap, Kaşgarlı Mahmud tarafından 4 kez düzeltilmiştir. İlk satırlarda, "Tanrı'ya sığınarak adını Dîvânu Lugâti't-Türk koydum." demiştir.</p>
+    <p>Bağdat'taki yöneticiler, Türklerin bir kültür diline sahip olduğunu düşünmüyorlardı. Son derece güzel bir biçimde Arapça ve Farsçayı bilen Kaşgarlı Mahmud, Türkçeye yönelik bu ön yargıyı kırmak için Dîvânu Lugâti't-Türk'ü yazmaya karar vermiştir.</p>
+  </section>
+
   <script>
     const galleries = {
       gallery1: ["ResimSeyahatname/WhatsApp%20Görsel%202025-05-30%20saat%2021.11.23_34434e6e.jpg", "ResimSeyahatname/WhatsApp Görsel 2025-05-30 saat 21.12.10_16f5655f.jpg", "ResimSeyahatname/WhatsApp Görsel 2025-05-30 saat 21.14.42_8cc1739f.jpg","ResimSeyahatname/WhatsApp Görsel 2025-05-30 saat 21.21.19_c2d77a83.jpg"],
       gallery2: ["ResimSeyahatname/WhatsApp Görsel 2025-05-30 saat 21.15.08_a9d79a96.jpg", "ResimSeyahatname/WhatsApp Görsel 2025-05-30 saat 21.15.48_f0b58e78.jpg", "ResimSeyahatname/WhatsApp Görsel 2025-05-30 saat 21.16.30_fcc88396.jpg","ResimSeyahatname/WhatsApp Görsel 2025-05-30 saat 21.16.39_e6943020.jpg"]
+    };
+
+    // Paragraflar - Her görsel için farklı paragraflar
+    const paragraphs = {
+      gallery1: [
+        "Ayasofya paragrafı 1 - İlk görsel için bu paragraf gösterilecek.",
+        "Ayasofya paragrafı 2 - İkinci görsel için bu paragraf gösterilecek.",
+        "Ayasofya paragrafı 3 - Üçüncü görsel için bu paragraf gösterilecek.",
+        "Ayasofya paragrafı 4 - Dördüncü görsel için bu paragraf gösterilecek."
+      ],
+      gallery2: [
+        "Sultan Ahmet Camii paragrafı 1 - İlk görsel için bu paragraf gösterilecek.",
+        "Sultan Ahmet Camii paragrafı 2 - İkinci görsel için bu paragraf gösterilecek.",
+        "Sultan Ahmet Camii paragrafı 3 - Üçüncü görsel için bu paragraf gösterilecek.",
+        "Sultan Ahmet Camii paragrafı 4 - Dördüncü görsel için bu paragraf gösterilecek."
+      ]
     };
 
     const currentIndexes = { gallery1: 0, gallery2: 0 };
@@ -408,14 +502,4 @@
     function changeImage(galleryId, direction) {
       const images = galleries[galleryId];
       currentIndexes[galleryId] = (currentIndexes[galleryId] + direction + images.length) % images.length;
-      document.querySelector(`#${galleryId} img`).src = images[currentIndexes[galleryId]];
-    }
-
-    function updateTilsimImage(imageId, imagePath) {
-      if (imagePath.trim() !== '') {
-        document.getElementById(imageId).src = imagePath;
-      }
-    }
-  </script>
-</body>
-</html>
+      document.querySelector(`#${galleryId} img`).src = images[currentIndexes[galleryId]
