@@ -503,3 +503,25 @@
       const images = galleries[galleryId];
       currentIndexes[galleryId] = (currentIndexes[galleryId] + direction + images.length) % images.length;
       document.querySelector(`#${galleryId} img`).src = images[currentIndexes[galleryId]
+];
+      
+      // Paragrafı da güncelle
+      const currentParagraphs = paragraphs[galleryId];
+      const currentIndex = currentIndexes[galleryId];
+      document.querySelector(`#paragraph${galleryId.slice(-1)}`).innerHTML = `<p>${currentParagraphs[currentIndex]}</p>`;
+    }
+
+    function updateTilsimImage(imageId, newSrc) {
+      if (newSrc.trim() !== '') {
+        document.getElementById(imageId).src = newSrc;
+      }
+    }
+
+    // Sayfa yüklendiğinde ilk paragrafları ayarla
+    window.onload = function() {
+      document.querySelector('#paragraph1').innerHTML = `<p>${paragraphs.gallery1[0]}</p>`;
+      document.querySelector('#paragraph2').innerHTML = `<p>${paragraphs.gallery2[0]}</p>`;
+    }
+  </script>
+</body>
+</html>
