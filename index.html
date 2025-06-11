@@ -14,11 +14,13 @@
         .map-container {
             position: relative;
             display: inline-block;
+            width: 80vw; /* Haritanın genişliğini ayarlarsın */
         }
 
-        img {
-            max-width: 100%;
+        .map-container img {
+            width: 100%;
             height: auto;
+            display: block;
         }
 
         .city-button {
@@ -30,20 +32,21 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 14px;
+            transform: translate(-50%, -50%); /* Ortalamak için */
         }
     </style>
     <script>
         function openInfoPage(city) {
             const formattedCity = city
                 .toLowerCase()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Türkçe karakterleri temizler
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
                 .replace(/ı/g, "i")
                 .replace(/ç/g, "c")
                 .replace(/ş/g, "s")
                 .replace(/ö/g, "o")
                 .replace(/ü/g, "u")
                 .replace(/ğ/g, "g")
-                .replace(/ /g, ""); // boşlukları kaldırır
+                .replace(/ /g, "");
             window.location.href = `${formattedCity}.html`;
         }
     </script>
@@ -51,17 +54,18 @@
 <body>
     <div class="map-container">
         <img src="Turkiyee.png" alt="Türkiye Haritası">
-        
-        <button class="city-button" style="top: 110px; left: 240px;" onclick="openInfoPage('İstanbul')">İstanbul</button>
-        <button class="city-button" style="top: 230px; left: 500px;" onclick="openInfoPage('Ankara')">Ankara</button>
-        <button class="city-button" style="top: 345px; left: 93px;" onclick="openInfoPage('İzmir')">İzmir</button>
-        <button class="city-button" style="top: 500px; left: 265px;" onclick="openInfoPage('Denizli')">Denizli</button>
-        <button class="city-button" style="top: 90px; left: 1300px;" onclick="openInfoPage('Kars')">Kars</button>
-        <button class="city-button" style="top: 170px; left: 200px;" onclick="openInfoPage('Bursa')">Bursa</button>
-        <button class="city-button" style="top: 390px; left: 500px;" onclick="openInfoPage('Konya')">Konya</button>
-        <button class="city-button" style="top: 575px; left: 580px;" onclick="openInfoPage('Mersin')">Mersin</button>
-        <button class="city-button" style="top: 532px; left: 850px;" onclick="openInfoPage('Gaziantep')">Gaziantep</button>
-        <button class="city-button" style="top: 185px; left: 1200px;" onclick="openInfoPage('Erzurum')">Erzurum</button>
+
+        <!-- Koordinatlar: top ve left yüzdelik değerlerle -->
+        <button class="city-button" style="top: 15%; left: 22%;" onclick="openInfoPage('İstanbul')">İstanbul</button>
+        <button class="city-button" style="top: 32%; left: 45%;" onclick="openInfoPage('Ankara')">Ankara</button>
+        <button class="city-button" style="top: 48%; left: 10%;" onclick="openInfoPage('İzmir')">İzmir</button>
+        <button class="city-button" style="top: 70%; left: 28%;" onclick="openInfoPage('Denizli')">Denizli</button>
+        <button class="city-button" style="top: 12%; left: 92%;" onclick="openInfoPage('Kars')">Kars</button>
+        <button class="city-button" style="top: 24%; left: 20%;" onclick="openInfoPage('Bursa')">Bursa</button>
+        <button class="city-button" style="top: 58%; left: 45%;" onclick="openInfoPage('Konya')">Konya</button>
+        <button class="city-button" style="top: 80%; left: 52%;" onclick="openInfoPage('Mersin')">Mersin</button>
+        <button class="city-button" style="top: 74%; left: 76%;" onclick="openInfoPage('Gaziantep')">Gaziantep</button>
+        <button class="city-button" style="top: 26%; left: 85%;" onclick="openInfoPage('Erzurum')">Erzurum</button>
     </div>
 </body>
 </html>
