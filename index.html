@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Türkiye Haritası</title>
     <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --text-color: #000;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             text-align: center;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .map-container {
             position: relative;
             display: inline-block;
-            width: 80vw; /* Haritanın genişliğini ayarlarsın */
+            width: 80vw;
+            margin-top: 40px;
         }
 
         .map-container img {
@@ -32,9 +42,52 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 14px;
-            transform: translate(-50%, -50%); /* Ortalamak için */
+            transform: translate(-50%, -50%);
+        }
+
+        .bottom-buttons {
+            margin: 40px auto 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .bottom-buttons button:hover {
+            background-color: #3e8e41;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        body.dark {
+            --bg-color: #121212;
+            --text-color: #ffffff;
         }
     </style>
+
     <script>
         function openInfoPage(city) {
             const formattedCity = city
@@ -49,13 +102,37 @@
                 .replace(/ /g, "");
             window.location.href = `${formattedCity}.html`;
         }
+
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark");
+
+            const isDark = body.classList.contains("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+
+            document.getElementById("themeToggle").textContent = isDark ? "🌙 Karanlık Mod" : "🌞 Aydınlık Mod";
+        }
+
+        // Sayfa yüklenince tema ayarını kontrol et
+        window.onload = function () {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.body.classList.add("dark");
+                document.getElementById("themeToggle").textContent = "🌙 Karanlık Mod";
+            } else {
+                document.getElementById("themeToggle").textContent = "🌞 Aydınlık Mod";
+            }
+        }
     </script>
 </head>
 <body>
+    <!-- Tema Değiştir Butonu -->
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌞 Aydınlık Mod</button>
+
+    <!-- Harita -->
     <div class="map-container">
         <img src="Turkiyee.png" alt="Türkiye Haritası">
 
-        <!-- Koordinatlar: top ve left yüzdelik değerlerle -->
         <button class="city-button" style="top: 15%; left: 22%;" onclick="openInfoPage('İstanbul')">İstanbul</button>
         <button class="city-button" style="top: 32%; left: 45%;" onclick="openInfoPage('Ankara')">Ankara</button>
         <button class="city-button" style="top: 48%; left: 10%;" onclick="openInfoPage('İzmir')">İzmir</button>
@@ -66,6 +143,14 @@
         <button class="city-button" style="top: 80%; left: 52%;" onclick="openInfoPage('Mersin')">Mersin</button>
         <button class="city-button" style="top: 74%; left: 76%;" onclick="openInfoPage('Gaziantep')">Gaziantep</button>
         <button class="city-button" style="top: 26%; left: 85%;" onclick="openInfoPage('Erzurum')">Erzurum</button>
+    </div>
+
+    <!-- Alt Butonlar -->
+    <div class="bottom-buttons">
+        <button onclick="alert('Hazırlayanlar: Ada ve arkadaşları 😄')">Hazırlayanlar</button>
+        <button onclick="alert('Ek bilgiler burada yer alacak.')">Ek Bilgiler</button>
+        <button onclick="alert('Kaynak: T.C. Harita Genel Müdürlüğü + Tüik')">Kaynakça</button>
+        <button onclick="alert('Bağış yapmak için: bagis@orneksite.com')">Bağış Yap</button>
     </div>
 </body>
 </html>
